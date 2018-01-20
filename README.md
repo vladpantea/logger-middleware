@@ -3,7 +3,7 @@ Logger middleware using Winston and file daily rotate strategy. Create folder vi
 
 ## Installation
 
-
+`$ npm install loggerx`
 
 ## Usage
 
