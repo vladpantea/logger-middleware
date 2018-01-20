@@ -33,7 +33,10 @@ Logger middleware using Winston and file daily rotate strategy. Create folder vi
     logger.warn('warn');
     logger.error('error');
 
-    var server = app.listen(3000, () => console.log('Example app listening on port %s!',3000));
+    const route = require('./lib/routes');
+    app.use('/api',route.definedRoutes);
+    
+    const server = app.listen(3000, () => console.log('Example app listening on port %s!',3000));
 
     module.exports = {
         express: server
@@ -41,6 +44,7 @@ Logger middleware using Winston and file daily rotate strategy. Create folder vi
 ```
 
 ```fileLog.log
+/* fileLog.log */
 2018-01-20T19:10:20.861Z [INFO] Log through info
 2018-01-20T19:10:20.862Z [INFO] info
 2018-01-20T19:10:20.862Z [WARN] warn
