@@ -1,15 +1,30 @@
 {
-  "name": "logger-middleware",
+  "name": "loggerx",
   "version": "1.0.0",
-  "description": "Logger middleware for express and node.js applications",
+  "description": "Logger middleware using Winston and file daily rotate strategy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "author": "Vlad Pantea <vlad.pantea@gmail.com>",
-  "license": "MIT",
+  "author": {
+    "name": "vladpantea",
+    "email": "vlad.pantea@gmail.com",
+    "url": "https://github.com/vladpantea"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladpantea/logger-middleware.git"
+  },
   "dependencies": {
     "winston": "^2.4.0",
     "winston-daily-rotate-file": "^1.7.2"
-  }
+  },
+  "keywords": [
+    "logger",
+    "winston middleware",
+    "middleware",
+    "daily file rotate strategy"    
+  ],
+  "license": "MIT"
 }
