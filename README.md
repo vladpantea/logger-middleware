@@ -23,7 +23,8 @@ Logger middleware using Winston and file daily rotate strategy. Create folder vi
     const path = require('path');
     const logDirectory = path.join(__dirname,'logs');
 
-    const logger = require('loggerx')({path:logDirectory,fileName:'medo-login.log'});
+    //logDirectory=C:/Development/loggerProject/logs/fileLog.log
+    const logger = require('loggerx')({path:logDirectory,fileName:'fileLog.log'});
     app.use(logger.accesslog);
 
     logger.log('info','Log through info');
@@ -36,7 +37,15 @@ Logger middleware using Winston and file daily rotate strategy. Create folder vi
 
     module.exports = {
         express: server
-    }   
+    }
+```
+
+```fileLog.log
+2018-01-20T19:10:20.861Z [INFO] Log through info
+2018-01-20T19:10:20.862Z [INFO] info
+2018-01-20T19:10:20.862Z [WARN] warn
+2018-01-20T19:10:20.862Z [ERROR] error
+2018-01-20T19:10:25.852Z [INFO] Request protocol:[http], request type:[POST], request path:[/api/helloworld], request headers:[{"cache-control":"no-cache","user-agent":"PostmanRuntime/x.x.x","accept":"*/*","host":"localhost:3000","accept-encoding":"gzip, deflate","content-length":"0","connection":"keep-alive"}]
 ```
 
 # License
