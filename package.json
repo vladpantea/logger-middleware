@@ -1,6 +1,6 @@
 {
   "name": "loggerx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Logger middleware using Winston and file daily rotate strategy",
   "main": "index.js",
   "scripts": {

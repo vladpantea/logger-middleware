@@ -38,7 +38,7 @@ const logger = function(configuration){
     });
       
     const accesslog = function(req,res,next){
-        logger.log('info',"Request protocol:[%s], request type:[%s], request path:[%s], request headers:[%s]",req.protocol,req.method,req.path,JSON.stringify(req.headers));
+        logger.log('info',"Request protocol:[%s], request type:[%s], request path:[%s]",req.protocol,req.method,req.path);
         
         next();
     };
